@@ -1,0 +1,31 @@
+name: Pets
+version: '${project.version}'
+main: org.github.spook.pets.Pets
+api-version: 1.8.8
+depend: [ MassiveCore, NBTAPI ]
+softdepend: [ WorldGuard, Factions, AdvancedEnchantments ]
+authors: [ spook ]
+permissions:
+  # -------------------------------------------- #
+  # THE REAL NODES
+  # -------------------------------------------- #
+  pets.pets: { description: Base command of pets plugin, default: false }
+  pets.gui: { description: Opens the pet gui, default: false }
+  pets.version: { description: Shows plugin version information, default: false }
+  # -------------------------------------------- #
+  # STAR NOTATION
+  # -------------------------------------------- #
+  pets.*:
+    default: op
+    children:
+      pets.pets: true
+      pets.gui: true
+      pets.version: true
+  # -------------------------------------------- #
+  # KITS
+  # -------------------------------------------- #
+  pets.kit.default:
+    default: true
+    children:
+      pets.gui: true
+      pets.version: true
