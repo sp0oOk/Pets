@@ -27,4 +27,4 @@ If you have any suggestions or would like to contribute to the plugin by adding 
 
 ## Showcase
 
-![](https://i.imgur.com/72iHQTn.gif)
+![Cage Pet](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzU2YjdiNzc4MzNkNDBjOTA5NGVjZjg1MDE0N2YwZTcxMjVkYTg1ZSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/fYn5qzpdG6S2Qityzf/giphy.gif)
