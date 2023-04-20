@@ -4,7 +4,7 @@ import org.github.spook.pets.Util;
 import org.github.spook.pets.abilities.IAbility;
 import org.github.spook.pets.enums.Lang;
 import org.github.spook.pets.Pet;
-import com.massivecraft.massivecore.Args;
+import org.github.spook.pets.AbilityArgs;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.entity.EntityDamageEvent;
@@ -12,7 +12,7 @@ import org.bukkit.event.entity.EntityDamageEvent;
 public class ReduceDamageAbility implements IAbility {
 
   @Override
-  public boolean execute(Pet pet, Player player, Event event, Args args) {
+  public boolean execute(Pet pet, Player player, Event event, AbilityArgs args) {
 
     final EntityDamageEvent damageEvent;
 
@@ -22,7 +22,7 @@ public class ReduceDamageAbility implements IAbility {
       return false;
     }
 
-    final EntityDamageEvent.DamageCause causeNeeded = Util.parseDamageCause(args.get());
+    final EntityDamageEvent.DamageCause causeNeeded = Util.parseDamageCause((String) args.get());
 
     if (causeNeeded == null) {
       Lang.INVALID_CONFIG.send(player, pet.getInternalName());

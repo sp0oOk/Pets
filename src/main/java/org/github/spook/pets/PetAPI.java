@@ -9,7 +9,7 @@ import org.github.spook.pets.enums.Lang;
 import org.github.spook.pets.enums.Perm;
 import org.github.spook.pets.integration.worldguard.IntegrationWorldGuard;
 import com.google.common.collect.Sets;
-import com.massivecraft.massivecore.Args;
+import org.github.spook.pets.AbilityArgs;
 import com.massivecraft.massivecore.util.TimeDiffUtil;
 import com.massivecraft.massivecore.util.Txt;
 import de.tr7zw.nbtapi.NBTCompound;
@@ -119,7 +119,7 @@ public class PetAPI {
               abilityInstance
                   .getClass()
                   .getDeclaredMethod(
-                      "execute", Pet.class, Player.class, Event.class, Args.class);
+                      "execute", Pet.class, Player.class, Event.class, AbilityArgs.class);
         } catch (NoSuchMethodException e) {
           e.printStackTrace(); // Should never occur as abilities implement IAbility
           continue;
@@ -153,7 +153,7 @@ public class PetAPI {
         }
 
         if (!abilityInstance.execute(
-            pet.get(), player, event, Args.create(Util.box(args), 0))) {
+            pet.get(), player, event, AbilityArgs.create(Util.box(args), 0))) {
           break;
         }
 

@@ -5,7 +5,7 @@ import org.github.spook.pets.abilities.RequiredEvent;
 import org.github.spook.pets.Pet;
 import java.util.regex.Pattern;
 
-import com.massivecraft.massivecore.Args;
+import org.github.spook.pets.AbilityArgs;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -16,7 +16,7 @@ public class CommandAbility implements IAbility {
 
   @Override
   @RequiredEvent(PlayerInteractEvent.class)
-  public boolean execute(Pet pet, Player player, Event event, Args args) {
+  public boolean execute(Pet pet, Player player, Event event, AbilityArgs args) {
 
     final boolean asOp = args.get();
     final String command =

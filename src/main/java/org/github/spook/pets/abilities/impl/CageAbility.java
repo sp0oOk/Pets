@@ -7,7 +7,7 @@ import org.github.spook.pets.abilities.PvPRegionOnly;
 import org.github.spook.pets.abilities.RequiredEvent;
 import org.github.spook.pets.enums.Lang;
 import org.github.spook.pets.integration.worldguard.IntegrationWorldGuard;
-import com.massivecraft.massivecore.Args;
+import org.github.spook.pets.AbilityArgs;
 import com.massivecraft.massivecore.Pair;
 import org.github.spook.pets.Pet;
 import com.massivecraft.massivecore.MetadataSimple;
@@ -33,7 +33,7 @@ public class CageAbility implements IAbility {
   @Override
   @RequiredEvent(PlayerInteractEvent.class)
   @PvPRegionOnly
-  public boolean execute(Pet pet, Player player, Event _event, Args args) {
+  public boolean execute(Pet pet, Player player, Event _event, AbilityArgs args) {
 
     final Set<Player> players =
         MUtil.getNearbyPlayers(player, 8.0D, false).stream()
@@ -44,7 +44,7 @@ public class CageAbility implements IAbility {
       Lang.PLAYERS_NOT_FOUND.send(player, player.getName());
       return false;
     }
-
+    
     final String roof = args.get(), floor = args.get(), wall = args.get();
 
     final Material roofMaterial = Util.tryParseMaterial(roof),
