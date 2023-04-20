@@ -1,0 +1,189 @@
+{
+  "pets": [
+    {
+      "internalName": "sheepPet",
+      "displayName": "{tier-color-bold}Sheep Pet &7[Level {level}]",
+      "lore": [
+        "",
+        "{pet-type}",
+        "&fReduces fall damage.",
+        "",
+        "&e&lLevel: {level}",
+        "&e&lEXP: {exp} / {required-exp}",
+        "{progress-bar}"
+      ],
+      "textureURL": "https://textures.minecraft.net/texture/30f50394c6d7dbc03ea59fdf504020dc5d6548f9d3bc9dcac896bb5ca08587a",
+      "activationType": "PASSIVE",
+      "tier": "COMMON",
+      "disabledWorlds": [],
+      "minXPIncrease": 10,
+      "maxXPIncrease": 100,
+      "maxLevel": 100,
+      "xpPerLevel": 1000,
+      "cooldown": "",
+      "onActivate": {
+        "EntityDamageEvent": {
+          "25": [
+            "[reduce_damage] FALL 5.0"
+          ],
+          "50": [
+            "[reduce_damage] FALL 10.0"
+          ],
+          "75": [
+            "[reduce_damage] FALL 15.0"
+          ],
+          "100": [
+            "[reduce_damage] FALL 20.0"
+          ]
+        }
+      }
+    },
+    {
+      "internalName": "shieldPet",
+      "displayName": "{tier-color-bold}Shield Pet &7[Level {level}]",
+      "lore": [
+        "",
+        "{pet-type}",
+        "&fGain a temporary Resistance effect.",
+        "&fCooldown: {cooldown}",
+        "",
+        "&eLevel: {level}",
+        "&eEXP: {exp} / {required-exp}",
+        "{progress-bar}"
+      ],
+      "textureURL": "https://textures.minecraft.net/texture/b26f501d2117d4397863ce4c9d9b85f267bd58f03cafb25a569929bb588bce71",
+      "activationType": "ACTIVE",
+      "tier": "COMMON",
+      "disabledWorlds": [],
+      "minXPIncrease": 10,
+      "maxXPIncrease": 150,
+      "maxLevel": 100,
+      "xpPerLevel": 1000,
+      "cooldown": "30s",
+      "onActivate": {
+        "PlayerInteractEvent": {
+          "1": [
+            "[effect] DAMAGE_RESISTANCE 6 1"
+          ],
+          "40": [
+            "[effect] DAMAGE_RESISTANCE 6 2"
+          ],
+          "80": [
+            "[effect] DAMAGE_RESISTANCE 8 3"
+          ],
+          "100": [
+            "[effect] DAMAGE_RESISTANCE 8 4"
+          ]
+        }
+      }
+    },
+    {
+      "internalName": "silverfishPet",
+      "displayName": "{tier-color-bold}Silverfish Pet &7[Level {level}]",
+      "lore": [
+        "",
+        "{pet-type}",
+        "&fGain a permanent Haste effect.",
+        "",
+        "&e&lLevel: {level}",
+        "&e&lEXP: {exp} / {required-exp}",
+        "{progress-bar}"
+      ],
+      "textureURL": "https://textures.minecraft.net/texture/c02cb217d829dc356283918e71446a8b9a89cc97c7c1a2135a5276fbb0554e6a",
+      "activationType": "PASSIVE",
+      "tier": "COMMON",
+      "disabledWorlds": [],
+      "minXPIncrease": 10,
+      "maxXPIncrease": 150,
+      "maxLevel": 100,
+      "xpPerLevel": 1000,
+      "cooldown": "5s",
+      "onActivate": {
+        "AlwaysOnTick": {
+          "1": [
+            "[effect] FAST_DIGGING 5 1"
+          ],
+          "25": [
+            "[effect] FAST_DIGGING 5 2"
+          ],
+          "50": [
+            "[effect] FAST_DIGGING 5 3"
+          ],
+          "75": [
+            "[effect] FAST_DIGGING 5 4"
+          ]
+        }
+      }
+    },
+    {
+      "internalName": "cagePet",
+      "displayName": "{tier-color-bold}Cage Pet &7[Level {level}]",
+      "lore": [
+        "",
+        "{pet-type}",
+        "&fSummons a dimensional cage for a",
+        "&flimited time.",
+        "&fCooldown: {cooldown}",
+        "",
+        "&eLevel: {level}",
+        "&eEXP: {exp} / {required-exp}",
+        "{progress-bar}"
+      ],
+      "textureURL": "https://textures.minecraft.net/texture/1427260023187be9b3b1a7ba125d61d5bb21d686257233fb9807a6c213a491e1",
+      "activationType": "ACTIVE",
+      "tier": "COMMON",
+      "disabledWorlds": [],
+      "minXPIncrease": 10,
+      "maxXPIncrease": 150,
+      "maxLevel": 100,
+      "xpPerLevel": 1000,
+      "cooldown": "%range:1-3m%",
+      "onActivate": {
+        "PlayerInteractEvent": {
+          "1": [
+            "[cage] OBSIDIAN OBSIDIAN IRON_FENCE 5 5 5 10"
+          ]
+        }
+      }
+    },
+    {
+      "internalName": "ironGolem",
+      "displayName": "{tier-color-bold}Iron Golem Pet &7[Level {level}]",
+      "lore": [
+        "",
+        "{pet-type}",
+        "&fGain temporary absorption hearts.",
+        "&fCooldown: {cooldown}",
+        "",
+        "&eLevel: {level}",
+        "&eEXP: {exp} / {required-exp}",
+        "{progress-bar}"
+      ],
+      "textureURL": "https://textures.minecraft.net/texture/8b9ec5ee0c02482858dea365c6b313ee3a9435b688aee4752306d80fae87790",
+      "activationType": "ACTIVE",
+      "tier": "MYTHIC",
+      "disabledWorlds": [],
+      "minXPIncrease": 10,
+      "maxXPIncrease": 150,
+      "maxLevel": 100,
+      "xpPerLevel": 1000,
+      "cooldown": "%range:20-25s%",
+      "onActivate": {
+        "PlayerInteractEvent": {
+          "1": [
+            "[effect] ABSORPTION 7 3"
+          ],
+          "50": [
+            "[effect] ABSORPTION 6 4"
+          ],
+          "75": [
+            "[effect] ABSORPTION 5 5"
+          ],
+          "100": [
+            "[effect] ABSORPTION 5 6"
+          ]
+        }
+      }
+    }
+  ]
+}
